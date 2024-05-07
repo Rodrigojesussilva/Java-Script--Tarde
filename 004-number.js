@@ -12,14 +12,12 @@ parseFloat
     console.log(typeof idade, idade)
 
     //converter boolean para numero
-
     var number  = Number(false)
     console.log(typeof number, number)
     var number  = Number(true)
     console.log(typeof number, number)
 
 //converter date para numero
-
 var number  = Number(new Date())
 console.log(typeof number, number)
 

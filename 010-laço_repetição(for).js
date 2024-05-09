@@ -17,16 +17,23 @@ for (let i = 0; i < frutas.length; i++) {
     console.log('Eu gosto de ' + frutas[i]);
 }
 
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 30
+const pessoa = {
+    Nome: 'Rodrigo',
+    Sobrenome: 'Jesus',
+    Idade: 43
   };
   
-  for (let key in person) {
-    console.log(key + ': ' + person[key]);
-  }
+  // Este é um loop for...in que itera sobre todas as propriedades enumeráveis de um objeto chamado 'pessoa'.
+// 'pessoa' é o nome do objeto sobre o qual estamos iterando.
 
+for (let key in pessoa) {
+  // 'key' é uma variável que irá conter o nome de cada propriedade do objeto 'pessoa' durante cada iteração do loop.
+
+  // Este console.log() imprime o nome da propriedade atual (key) e seu valor correspondente (pessoa[key]) no console.
+  // 'key' é o nome da propriedade, enquanto 'pessoa[key]' acessa o valor da propriedade atual.
+  console.log(key + ': ' + pessoa[key]);
+}
+//o break serve para parar o laço de repetição
   for (let i = 0; i < 10; i++) {
     if (i === 5) {
       break;

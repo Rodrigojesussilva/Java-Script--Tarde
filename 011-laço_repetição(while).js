@@ -7,7 +7,6 @@
     quando precisamos repetir uma ação até que uma condição 
     específica seja atendida.
 */
-
 //while
 let i = 0;
 while (i <= 5) {

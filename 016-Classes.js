@@ -58,24 +58,18 @@ class Cachorro extends Animal {
   }
 }
 
-/* 
- O método super é usado dentro de uma classe filha para chamar métodos da classe pai.
- Ele é usado no construtor para chamar o construtor da classe pai.
-*/
-
-class Cachorro1 extends Animal {
-  constructor(nome) {
-      super();
-      this.nome = nome;
-  }
-}
 // Exemplo de uso
 const rex = new Cachorro("Rex", 3, "Golden Retriever");
+const rex1 = new Cachorro("Rex Maluko", 100, "Vira lata");
 
 // Imprimir propriedades do cachorro
 console.log("Nome:", rex.nome); // Saída: Nome: Rex
 console.log("Idade:", rex.idade); // Saída: Idade: 3
 console.log("Raça:", rex.raca); // Saída: Raça: Golden Retriever
+
+console.log("Nome:", rex1.nome); // Saída: Nome: Rex
+console.log("Idade:", rex1.idade); // Saída: Idade: 3
+console.log("Raça:", rex1.raca); // Saída: Raça: Golden Retriever
 
 rex.nome = "TROVAO"
 rex.idade = 10
@@ -108,6 +102,13 @@ class Retangulo {
   
 }
 
+const retangulo = new Retangulo(4, 5); // Criando um objeto retângulo com largura 4 e altura 5
+console.log("A area do retangulo e:",retangulo.area); // Obtendo a área do retângulo (deve ser 20)
+
+retangulo.area = 36; // Definindo a área do retângulo para 36
+console.log("A largura e:",retangulo.largura); // Deve imprimir 6, pois a raiz quadrada de 36 é 6
+console.log("A altura e:",retangulo.altura); // Deve imprimir 6, pois a raiz quadrada de 36 é 6
+
 const rtl = new Retangulo(2, 1.5)
 console.log("A area do retangulo e:",rtl.area) 
 
@@ -122,6 +123,7 @@ class Utilidades {
   }
 }
 
+console.log(Utilidades.somar(5, 3)); // Saída: 8
 
       
 

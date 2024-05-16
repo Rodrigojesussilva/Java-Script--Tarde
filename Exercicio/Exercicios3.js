@@ -32,6 +32,49 @@
     parâmetro e retorna a mesma string sem espaços em branco.
 
 */
+// 1. Função para somar dois números
+function soma(a, b) {
+    return a + b;
+}
+// 2. Função para imprimir saudação
+function saudacao() {
+    console.log("Olá, mundo!");
+}
+// 3. Função para verificar se um número é par
+function verificarPar(numero) {
+    return numero % 2 === 0;
+}
+// 4. Função para calcular a área de um círculo
+function calcularAreaCirculo(raio) {
+    return Math.PI * raio ** 2;
+}
+// 5. Função para retornar a data atual
+function retornarDataAtual() {
+    return new Date();
+}
+// 6. Função para calcular a média de um array de números
+function calcularMedia(numeros) {
+    let total = 0;
+    numeros.forEach(function(numero) {
+        total += numero;
+    });
+    return total / numeros.length;
+}
+
+// Exemplos de uso das funções:
+
+console.log(soma(5, 3)); // Saída: 8
+
+saudacao(); // Saída: "Olá, mundo!" (impresso no console)
+
+console.log(verificarPar(6)); // Saída: true
+
+console.log(calcularAreaCirculo(3)); // Saída: ~28.27 (aproximadamente)
+
+console.log(retornarDataAtual()); // Saída: data atual
+
+console.log(calcularMedia([1, 2, 3, 4, 5])); // Saída: 3 (média dos números)
+
 //7
 function adicionarDois(numero) {
     return numero + 2;
@@ -63,3 +106,13 @@ function removerEspacos(texto) {
 }
 const rm = removerEspacos("rodrigo jesus")
 console.log(rm);
+
+var x 
+if(x>10)
+    {
+        alert("oi")
+    }
+    else
+    {
+        alert("tchau");
+    }

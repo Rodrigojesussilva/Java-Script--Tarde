@@ -1,6 +1,6 @@
 //Definição de uma Função Construtora:
 function Pessoa() {
-    this.nome
+    this.nome;
     this.idade;
     this.estado_civil;
 }
@@ -23,7 +23,7 @@ function Pessoa1(nome, idade, estado_civil) {
 }
 
 
-let pessoa2 = new Pessoa1("Rodrigo, 38, solteiro");
+let pessoa2 = new Pessoa1("Rodrigo", 38, "solteiro");
 
 
 

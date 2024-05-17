@@ -16,21 +16,13 @@ const pessoa = {
     idade: 30,
     casado: true
 };
-
-//Acesso a Propriedades:
-console.log(pessoa.nome); // Saída: João
-console.log(pessoa['idade']); // Saída: 30
-
-pessoa.nome = "rodrigo"
-pessoa.idade = 42
-pessoa.casado = false
-console.log(pessoa.nome); 
-console.log(pessoa['idade']); 
+ 
 
 //DESCONTRUTORES - Adição e Remoção de Propriedades:
 pessoa.profissao = "Programador"; // Adicionando nova propriedade
 console.log("A profissão da pessoa e:", pessoa.profissao)
 delete pessoa.casado; // Removendo propriedade existente
+console.log(pessoa)
 
 //Objetos Aninhados:
 const empresa = {

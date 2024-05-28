@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Script</title>
+    <title>Informações de Berry</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .berry {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-
 <body>
-
+    <h1>Informações de Berry</h1>
+    <div id="berry-info"></div>
 
     <script>
-        console.log("Ola Mundo!")
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://pokeapi.co/api/v2/berry/?id=1",
+            "method": "GET",
+            "headers": {
+                "User-Agent": "insomnia/9.2.0"
+            }
+        };
+
+        $.ajax(settings).done(function(response) {
+            console.log(response);
+            if (response.results && response.results.length > 0) {
+                response.results.forEach(function(berry) {
+                    $('#berry-info').append(`
+                        <div class="berry">
+                            <h2>${berry.name}</h2>
+                            <p>ID: ${berry.url.split('/').slice(-2, -1)}</p>
+                        </div>
+                    `);
+                });
+            } else {
+                $('#berry-info').html('<p>Nenhuma berry encontrada.</p>');
+            }
+        }).fail(function() {
+            $('#berry-info').html('<p>Erro ao carregar as informações.</p>');
+        });
     </script>
 </body>
-
 </html>
